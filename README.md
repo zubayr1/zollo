@@ -7,6 +7,6 @@ React Semantic UI
 React Bootstrap
 
 
-###Authentication
+### Authentication
 
 Google FIrebase Auth
