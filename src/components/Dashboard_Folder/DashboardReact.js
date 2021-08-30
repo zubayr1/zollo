@@ -13,7 +13,7 @@ export default function Dahsboard_react() {
 
             Already have an Account? <Link to="/login">Log In</Link>
 
-            {currentuser.email}
+            {currentuser.uid}
             
         </div>
     )

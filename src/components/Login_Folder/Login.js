@@ -31,8 +31,11 @@ export default function Login() {
             history.push('/')
 
         }
-        catch{
-            setError("Failed to sign in")
+        catch (error){
+            if(error.message==='The password is invalid or the user does not have a password.' || error.message==='There is no user record corresponding to this identifier. The user may have been deleted.')
+                setError('No entry with the mail and password is found')
+            else
+            setError(error.message)
         }
         setLoading(false)
     }

@@ -33,7 +33,7 @@ export default function ForgotPassword() {
 
 
         }
-        catch{
+        catch (error){
             setError("Failed to reset password")
         }
         setLoading(false)

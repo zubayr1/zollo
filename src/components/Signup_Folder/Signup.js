@@ -33,8 +33,8 @@ export default function Signup() {
             history.push('/login')
 
         }
-        catch{
-            setError("Failed to create account")
+        catch (error){
+            setError(error.message)
         }
         setLoading(false)
     }
