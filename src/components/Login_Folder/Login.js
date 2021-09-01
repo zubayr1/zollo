@@ -3,6 +3,10 @@ import {Card, Button, Form, Alert} from 'react-bootstrap'
 import { Link , useHistory} from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import LoginReact from './LoginReact'
+import LoginwithGoogle from './LoginwithGoogle'
+
+import {  Divider } from 'semantic-ui-react'
+import LoginwithFacebook from './LoginwithFacebook'
 
 
 export default function Login() {
@@ -66,7 +70,14 @@ export default function Login() {
                     <div className="w-100 text-center mt-3">
                         <Link to="/forgot-password">Forgot Password?</Link>
                     </div>
-                </Card.Body>                
+                </Card.Body>   
+
+                <LoginwithGoogle/>    
+
+            <Divider horizontal>Or</Divider>
+
+            <LoginwithFacebook/>
+         
 
             </Card>
             
