@@ -1,4 +1,3 @@
-import { Container } from 'react-bootstrap';
 import './App.css';
 import Signup from './components/Signup_Folder/Signup';
 import { AuthProvider } from './context/AuthContext';
@@ -12,10 +11,13 @@ import PrivateRoute from './components/PrivateRouteFolder/PrivateRoute';
 function App() {
   return (
 
-    <div className="App">
-      <Container className="d-flex align-items-center justify-content-center" style={{minHeight: "100vh"}}>
+    <div className="App" >
 
-        <div className="w-100" style={{maxWidth: '400px'}}>
+      <>
+      <br/>
+      </>
+
+      <div >
 
           <Router>
             <AuthProvider>
@@ -37,7 +39,6 @@ function App() {
 
         </div>
       
-      </Container>
       
     </div>
     

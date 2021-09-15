@@ -1,12 +1,15 @@
 import React, {useRef, useState} from 'react'
-import {Card, Button, Form, Alert} from 'react-bootstrap'
+import { Button, Form, Alert} from 'react-bootstrap'
 import { Link , useHistory} from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import LoginReact from './LoginReact'
 import LoginwithGoogle from './LoginwithGoogle'
 
+import logo from '../../images/logo.png'
 import {  Divider } from 'semantic-ui-react'
 import LoginwithFacebook from './LoginwithFacebook'
+import 'semantic-ui-css/semantic.min.css'
+import {  Menu, Grid, Image, Segment, Header } from 'semantic-ui-react'
 
 
 export default function Login() {
@@ -44,45 +47,105 @@ export default function Login() {
         setLoading(false)
     }
 
+    
     return (
-        <div>
-            <Card>
-                <Card.Body>
-                    <h2 className="text-center mb-4">Log In</h2>
+        <div >
 
-                    {error && <Alert variant="danger">{error}</Alert>}
-                    <Form onSubmit={handleSubmit}>
-                        <Form.Group id="email">
-                            <Form.Label>Email</Form.Label>
-                            <Form.Control type="email" required ref={emailRef}></Form.Control>
-                        </Form.Group>
+            <Menu secondary>
+                <Menu.Item   
+                />
+                <strong><Link to="/login">
+                    <Image src={logo}  circular size='mini'/>
+                </Link></strong>
+            </Menu>
 
-                        <Form.Group id="password">
-                            <Form.Label>Password</Form.Label>
-                            <Form.Control type="password" required ref={passRef}></Form.Control>
-                        </Form.Group>
+       
 
-                        <br/>                      
+                <div style={{height: '80vh', marginLeft: '5%', marginRight: '5%'}} >
+                    <Segment vertical textAlign='center' style={{top:'25%'}} >
+            <Grid  >
+            <Grid.Row columns={2}>
+            <Grid.Column >
+                <LoginReact/>
+            </Grid.Column>
 
-                        <Button disabled={loading} className="w-100" type="submit">Login</Button>
-                    </Form>
+            <Grid.Column>
 
-                    <div className="w-100 text-center mt-3">
-                        <Link to="/forgot-password">Forgot Password?</Link>
+                <div style={{marginLeft:'20%', marginRight: '20%'}}>
+    
+                    
+
+                            {error && <Alert variant="danger">{error}</Alert>}
+                            <Form onSubmit={handleSubmit} size='sm'>
+                                <div className="w-100  mt-3">
+                                <Form.Group id="email">
+                                    <Form.Control type="email" placeholder="Enter email"  required ref={emailRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)'}}></Form.Control>
+                                </Form.Group>
+                                </div>
+                               
+                                <div className="w-100  mt-3">
+                                <Form.Group id="password">
+                                    <Form.Control type="password" placeholder="Password" required ref={passRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)'}}></Form.Control>
+                                </Form.Group>
+                                </div>
+
+                                <div className="w-100  mt-3" style={{textAlign:'right'}}>
+                                <Link to="/forgot-password" style={{ textDecoration: 'none', color: '#A4A4A4' }}>
+                                    Forgot Password?</Link>
+                            </div>
+
+
+                                <div className="w-100  mt-4">
+                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa'}}>Sign In</Button>
+                                </div>
+                            </Form>
+
+                            <div className="w-100  mt-2">
+                                <>
+                                <br/>
+                                </>
+                            <Divider horizontal>
+                                <Header as='h6'>
+                                <div style={{color:'#454343'}}>
+                                    or login with
+                                </div>
+                                </Header></Divider>
+
+                            
+
+
+                    <div  style={{marginLeft:'35%', marginRight:'35%'}}>
+                    
+
+                    <Grid >
+                        <Grid.Row  columns={2}>
+                        <Grid.Column floated='left' width={6}>
+                        <LoginwithGoogle/>
+                        </Grid.Column>
+                        <Grid.Column floated='right' width={5}>
+                        <LoginwithFacebook/>
+
+                        </Grid.Column>
+                        </Grid.Row>
+
+                    
+                    </Grid>
                     </div>
-                </Card.Body>   
+                </div>
+                
 
-                <LoginwithGoogle/>    
+            </div>
 
-            <Divider horizontal>Or</Divider>
-
-            <LoginwithFacebook/>
-         
-
-            </Card>
+            </Grid.Column>
+            </Grid.Row>
             
-            <LoginReact/>
-            
+        </Grid>
+        </Segment>
         </div>
+
+
+        </div>
+            
+        
     )
 }
