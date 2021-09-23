@@ -16,3 +16,7 @@ Type: username-password
 Google login
 
 Facebook login(incomplete)
+
+date:
+
+15.09.21: Design login page
