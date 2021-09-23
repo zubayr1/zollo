@@ -3,6 +3,7 @@ import { useAuth } from '../../context/AuthContext'
 import { useHistory} from 'react-router-dom'
 import {Alert} from 'react-bootstrap'
 import icon from '../../images/google_icon.png'
+import { Image,  } from 'semantic-ui-react'
 
 export default function LoginwithGoogle() {
     const {googlelogin} = useAuth()
@@ -34,12 +35,15 @@ export default function LoginwithGoogle() {
 
     return (
         <div>
+            
+
+            <div style={{alignSelf:'center', alignItems:'center'}}>
              {error && <Alert variant="danger">{error}</Alert>}
-        <button disabled={loading} className="login-provider-button" onClick={onsubmit}>
-        <div >
-        <img src={icon} alt="google icon" height='30' />
+        <div disabled={loading} className="login-provider-button" onClick={onsubmit}>
+        <Image src={icon} circular  size='tiny'/>
         </div>
-       </button>
+
+        </div>
       </div>
             
     )

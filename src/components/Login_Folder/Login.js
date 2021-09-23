@@ -5,6 +5,9 @@ import { useAuth } from '../../context/AuthContext'
 import LoginReact from './LoginReact'
 import LoginwithGoogle from './LoginwithGoogle'
 
+import ellipse from '../../images/ellipse.png'
+import group from '../../images/group.png'
+
 import logo from '../../images/logo.png'
 import {  Divider } from 'semantic-ui-react'
 import LoginwithFacebook from './LoginwithFacebook'
@@ -51,6 +54,12 @@ export default function Login() {
     return (
         <div >
 
+            <div style={{position: 'absolute', zIndex: -1, left:'0px', bottom:'0px' }}>
+
+            <Image src={group}  size='big' />                    
+
+            </div>
+
             <Menu secondary>
                 <Menu.Item   
                 />
@@ -63,9 +72,16 @@ export default function Login() {
 
                 <div style={{height: '80vh', marginLeft: '5%', marginRight: '5%'}} >
                     <Segment vertical textAlign='center' style={{top:'25%'}} >
+
             <Grid  >
             <Grid.Row columns={2}>
             <Grid.Column >
+            <div style={{position: 'absolute', zIndex: -1, right:'40%', bottom:'20%'}}>
+
+            <Image src={ellipse}  size='large' />                    
+
+            </div>
+
                 <LoginReact/>
             </Grid.Column>
 
@@ -79,13 +95,13 @@ export default function Login() {
                             <Form onSubmit={handleSubmit} size='sm'>
                                 <div className="w-100  mt-3">
                                 <Form.Group id="email">
-                                    <Form.Control type="email" placeholder="Enter email"  required ref={emailRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)'}}></Form.Control>
+                                    <Form.Control type="email" placeholder="Enter email"  required ref={emailRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)', height:'40px'}}></Form.Control>
                                 </Form.Group>
                                 </div>
                                
                                 <div className="w-100  mt-3">
                                 <Form.Group id="password">
-                                    <Form.Control type="password" placeholder="Password" required ref={passRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)'}}></Form.Control>
+                                    <Form.Control type="password" placeholder="Password" required ref={passRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)', height:'40px'}}></Form.Control>
                                 </Form.Group>
                                 </div>
 
@@ -96,7 +112,7 @@ export default function Login() {
 
 
                                 <div className="w-100  mt-4">
-                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa'}}>Sign In</Button>
+                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}>Sign In</Button>
                                 </div>
                             </Form>
 
