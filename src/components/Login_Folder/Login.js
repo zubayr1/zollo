@@ -54,19 +54,21 @@ export default function Login() {
     return (
         <div>
 
-            <div style={{position: 'absolute', zIndex: -1, left:'0px', bottom:'0px' }}>
-
-            <Image src={group}  size='big' />                    
-
-            </div>
-
-            <Menu secondary>
+             <Menu secondary>
                 <Menu.Item   
                 />
                 <strong><Link to="/login">
                     <Image src={logo}  circular size='mini'/>
                 </Link></strong>
             </Menu>
+
+            <div style={{position: 'absolute', zIndex: -1, left:'0px', bottom:'0px' }}>
+
+            <Image src={group}  size='big' />                    
+
+            </div>
+
+           
 
        
 
@@ -76,7 +78,7 @@ export default function Login() {
             <Grid  >
             <Grid.Row columns={2}>
             <Grid.Column >
-            <div style={{position: 'absolute', zIndex: -1, right:'40%', bottom:'20%'}}>
+            <div style={{position: 'absolute', zIndex: -1, right:'40%', bottom:'45%'}}>
 
             <Image src={ellipse}  size='large' />                    
 
@@ -93,19 +95,19 @@ export default function Login() {
 
                             {error && <Alert variant="danger">{error}</Alert>}
                             <Form onSubmit={handleSubmit} size='sm'>
-                                <div className="w-100  mt-3">
+                                <div className="w-100  mt-4">
                                 <Form.Group id="email">
                                     <Form.Control type="email" placeholder="Enter email"  required ref={emailRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)', height:'40px'}}></Form.Control>
                                 </Form.Group>
                                 </div>
                                
-                                <div className="w-100  mt-3">
+                                <div className="w-100  mt-4">
                                 <Form.Group id="password">
                                     <Form.Control type="password" placeholder="Password" required ref={passRef} style={{backgroundColor:'rgba(180, 41, 249, 0.07)', height:'40px'}}></Form.Control>
                                 </Form.Group>
                                 </div>
 
-                                <div className="w-100  mt-3" style={{textAlign:'right'}}>
+                                <div className="w-100  mt-4" style={{textAlign:'right'}}>
                                 <Link to="/forgot-password" style={{ textDecoration: 'none', color: '#A4A4A4' }}>
                                     Forgot Password?</Link>
                             </div>
