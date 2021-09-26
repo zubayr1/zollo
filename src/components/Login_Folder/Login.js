@@ -109,12 +109,12 @@ export default function Login() {
 
                                 <div className="w-100  mt-4" style={{textAlign:'right'}}>
                                 <Link to="/forgot-password" style={{ textDecoration: 'none', color: '#A4A4A4' }}>
-                                    Forgot Password?</Link>
+                                   <h5> Forgot Password? </h5></Link>
                             </div>
 
 
                                 <div className="w-100  mt-5">
-                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}>Sign In</Button>
+                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}><h5>Sign In</h5></Button>
                                 </div>
                             </Form>
 
@@ -127,7 +127,7 @@ export default function Login() {
                         
 
                     <Divider horizontal>
-                                <Header as='h6'>
+                                <Header as='h4'>
                                 <div style={{color:'#454343'}}>
                                     or login with
                                 </div>

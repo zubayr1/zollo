@@ -120,7 +120,7 @@ export default function Signup() {
 
 
                                 <div className="w-100  mt-5">
-                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}>Sign Up</Button>
+                                <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}><h5>Sign Up</h5></Button>
                                 </div>
                             </Form>
 

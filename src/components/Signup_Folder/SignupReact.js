@@ -22,9 +22,9 @@ export default function SignupReact() {
                 <Grid.Row columns={2}>
                 <Grid.Column>
                 <div  className="w-100  mt-5" style={{textAlign:'left', marginLeft:'50%'}}>
-                    <p><strong>If you already have an account </strong> </p>
-                    <strong> then </strong>
-                    <Link to="/login" style={{ textDecoration: 'none', color: '#B429F9' }}><strong>login here!</strong></Link>
+                    <h5><p><strong>If you already have an account </strong> </p> </h5>
+                    <h5><strong> then </strong>
+                    <Link to="/login" style={{ textDecoration: 'none', color: '#B429F9' }}><strong>login here!</strong></Link> </h5>
                 </div>
                 </Grid.Column>
 

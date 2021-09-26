@@ -21,9 +21,9 @@ export default function LoginReact() {
                 <Grid.Row columns={2}>
                 <Grid.Column>
                 <div  className="w-100  mt-5" style={{textAlign:'left', marginLeft:'50%'}}>
-                    <p><strong>If you don't have an account </strong> </p>
-                    <strong> You can </strong>
-                    <Link to="/signup" style={{ textDecoration: 'none', color: '#B429F9' }}><strong>Register here!</strong></Link>
+                    <h5><strong>If you don't have an account </strong> </h5>
+                    <h5><strong> You can </strong>
+                    <Link to="/signup" style={{ textDecoration: 'none', color: '#B429F9' }}><strong>Register here!</strong></Link> </h5>
                 </div>
                 </Grid.Column>
 
