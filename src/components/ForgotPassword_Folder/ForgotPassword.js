@@ -1,6 +1,5 @@
 import React, {useRef, useState} from 'react'
 import { Button, Form, Alert} from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import { useAuth } from '../../context/AuthContext'
 import ForgotPassReact from './ForgotPassReact'
 import { Segment, } from 'semantic-ui-react'
