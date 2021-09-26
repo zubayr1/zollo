@@ -52,7 +52,7 @@ export default function Login() {
 
     
     return (
-        <div >
+        <div>
 
             <div style={{position: 'absolute', zIndex: -1, left:'0px', bottom:'0px' }}>
 
@@ -111,42 +111,41 @@ export default function Login() {
                             </div>
 
 
-                                <div className="w-100  mt-4">
+                                <div className="w-100  mt-5">
                                 <Button disabled={loading} className="w-100" type="submit" style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'50px'}}>Sign In</Button>
                                 </div>
                             </Form>
 
-                            <div className="w-100  mt-2">
-                                <>
-                                <br/>
-                                </>
-                            <Divider horizontal>
+                                
+                            
+                            
+
+
+                    <div style={{marginTop:'10%'}} >
+                        
+
+                    <Divider horizontal>
                                 <Header as='h6'>
                                 <div style={{color:'#454343'}}>
                                     or login with
                                 </div>
-                                </Header></Divider>
-
-                            
-
-
-                    <div  style={{marginLeft:'35%', marginRight:'35%'}}>
-                    
-
-                    <Grid >
-                        <Grid.Row  columns={2}>
-                        <Grid.Column floated='left' width={6}>
-                        <LoginwithGoogle/>
-                        </Grid.Column>
-                        <Grid.Column floated='right' width={5}>
-                        <LoginwithFacebook/>
-
-                        </Grid.Column>
-                        </Grid.Row>
+                                </Header>
+                    </Divider>
 
                     
-                    </Grid>
+                    <div style={{marginLeft:'25%', marginRight: '25%', marginTop:'5%'}}>
+                    
+                    <div style={{display:'grid', gridTemplateColumns:'auto auto'}}>
+                        <div ><LoginwithGoogle/>
+                        </div>
+
+                        <div ><LoginwithFacebook/>
+                        </div>
+                        
                     </div>
+
+                    </div>
+
                 </div>
                 
 
@@ -158,6 +157,8 @@ export default function Login() {
         </Grid>
         </Segment>
         </div>
+
+        
 
 
         </div>

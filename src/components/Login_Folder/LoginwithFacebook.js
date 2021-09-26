@@ -3,7 +3,6 @@ import { useAuth } from '../../context/AuthContext'
 import { useHistory} from 'react-router-dom'
 import {Alert} from 'react-bootstrap'
 import icon from '../../images/facebook_icon.png'
-import { Image,  } from 'semantic-ui-react'
 
 
 export default function LoginwithFacebook() {
@@ -41,7 +40,7 @@ export default function LoginwithFacebook() {
         <div>
            {error && <Alert variant="danger">{error}</Alert>}  
            <div disabled={loading} className="login-provider-button" onClick={onsubmit}>
-        <Image src={icon} circular bordered size='tiny'/>
+        <img src={icon} alt="Avatar" style={{border:'1px solid', borderRadius:'5px', padding: '10px'}}/>
         </div>
       </div>
             
