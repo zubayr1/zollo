@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import Header from '../HeaderFolder/Header'
 import { useAuth } from '../../context/AuthContext'
 
 export default function Dahsboard_react() {
@@ -8,10 +8,7 @@ export default function Dahsboard_react() {
 
     return (
         <div>
-            Dashboard <br/>
-            New User? <Link to="/signup">Sign Up</Link> <br/>
-
-            Already have an Account? <Link to="/login">Log In</Link>
+            <Header/>
 
             {currentuser.uid}
             
