@@ -58,7 +58,7 @@ export default function Header() {
                         <Grid divided='vertically'>
                             <Grid.Row columns={4}>
                             <Grid.Column width='8'>
-                            <Button style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'35px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}}> <div style={{display:'inline',}}>+</div> Post</Button>
+                            <Button style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'40px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}}> <div style={{display:'inline',}}>+</div> Post</Button>
 
                             </Grid.Column>
 
