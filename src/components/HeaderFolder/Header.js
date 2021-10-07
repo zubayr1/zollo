@@ -118,7 +118,7 @@ export default function Header() {
 
                                 <GridColumn width={4} floated='right'>
                                     
-                                    <Dropdown trigger={trigger} options={options} />
+                                    <Dropdown trigger={trigger} options={options} pointing='top right'/>
 
 
                                 </GridColumn>
