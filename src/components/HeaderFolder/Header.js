@@ -4,16 +4,44 @@ import logo from '../../images/logo.png'
 import notificationicon from '../../images/notificationicon.png'
 import chaticon from '../../images/chaticon.png'
 import usericon from '../../images/usericon.png'
+import { Link , } from 'react-router-dom'
+import { useAuth } from '../../context/AuthContext'
+
+import {  useHistory } from 'react-router-dom'
 
 
 export default function Header() {
 
-
+    const { currentuser} = useAuth()
     const [name, setName] = useState("");
+
+    const { logout} = useAuth()
+
+    const history = useHistory()
+
+    async function handlelogout()
+    {
+        await logout()
+        history.push('/login')
+    }
+
 
     const handleSubmit = (evt) => {
         evt.preventDefault();
         alert(`Submitting Name ${name}`)
+    }
+
+    const handledropdown = (evt, {value}) =>
+    {
+        const userid = currentuser.uid
+        if(value===1)
+        {
+            history.push('/'+userid)
+        }
+        if(value===7)
+        {
+            handlelogout()
+        }
     }
 
     const trigger = (
@@ -28,18 +56,18 @@ export default function Header() {
         key: 'user',
         text: (
         <span>
-            Signed in as <strong>Bob Smith</strong>
+            Signed in as {currentuser.uid}
         </span>
         ),
-        disabled: true,
+        
     },
-    { key: 'profile', text: 'Your Profile' },
-    { key: 'stars', text: 'Your Stars' },
-    { key: 'explore', text: 'Explore' },
-    { key: 'integrations', text: 'Integrations' },
-    { key: 'help', text: 'Help' },
-    { key: 'settings', text: 'Settings' },
-    { key: 'sign-out', text: 'Sign Out' },
+    { key: 'profile', text: 'Your Profile', value: 1},
+    { key: 'stars', text: 'Your Stars', value: 2 },
+    { key: 'explore', text: 'Explore' , value: 3},
+    { key: 'integrations', text: 'Integrations', value: 4 },
+    { key: 'help', text: 'Help', value: 5 },
+    { key: 'settings', text: 'Settings', value: 6 },
+    { key: 'sign-out', text: 'Sign Out', value: 7},
     ]
 
 
@@ -57,8 +85,10 @@ export default function Header() {
                             <GridRow columns={2} verticalAlign="middle">
 
                                 <GridColumn>
-
+                                <Link to="/">
                                     <img src={logo} style={{height:'40px'}} alt="logo"/>
+                                </Link>
+
                                 </GridColumn>
 
 
@@ -118,7 +148,7 @@ export default function Header() {
 
                                 <GridColumn width={4} floated='right'>
                                     
-                                    <Dropdown trigger={trigger} options={options} pointing='top right'/>
+                                    <Dropdown trigger={trigger} options={options} pointing='top right' onChange={handledropdown} />
 
 
                                 </GridColumn>

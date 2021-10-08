@@ -7,6 +7,7 @@ import Login from './components/Login_Folder/Login';
 import ForgotPassword from './components/ForgotPassword_Folder/ForgotPassword';
 
 import PrivateRoute from './components/PrivateRouteFolder/PrivateRoute';
+import Profile from './components/Profile/Profile';
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
                 <Route path="/login" component={Login} />
 
                 <Route path="/forgot-password" component={ForgotPassword} />
+
+                <Route path="/:profile" component={Profile} />
 
 
               </Switch>
