@@ -1,4 +1,4 @@
-import React, { useState }  from 'react'
+import React, { useState,  }  from 'react'
 import { Grid, Button, GridRow, GridColumn, Dropdown } from 'semantic-ui-react'
 import logo from '../../images/logo.png'
 import notificationicon from '../../images/notificationicon.png'
@@ -19,6 +19,18 @@ export default function Header() {
 
     const history = useHistory()
 
+
+    let userid = ''
+
+    try{
+        userid = currentuser.uid
+    }
+    catch{
+        history.push('/login')
+    }
+    
+
+
     async function handlelogout()
     {
         await logout()
@@ -33,7 +45,7 @@ export default function Header() {
 
     const handledropdown = (evt, {value}) =>
     {
-        const userid = currentuser.uid
+        
         if(value===1)
         {
             history.push('/'+userid)
@@ -64,7 +76,7 @@ export default function Header() {
         key: 'user',
         text: (
         <span>
-            Signed in as {currentuser.uid}
+            Signed in as {userid}
         </span>
         ),
         
