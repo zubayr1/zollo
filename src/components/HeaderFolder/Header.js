@@ -50,7 +50,7 @@ export default function Header() {
         {
             history.push('/'+userid)
         }
-        if(value===7)
+        if(value===6)
         {
             handlelogout()
         }
@@ -82,12 +82,11 @@ export default function Header() {
         
     },
     { key: 'profile', text: 'Your Profile', value: 1},
-    { key: 'stars', text: 'Your Stars', value: 2 },
-    { key: 'explore', text: 'Explore' , value: 3},
-    { key: 'integrations', text: 'Integrations', value: 4 },
-    { key: 'help', text: 'Help', value: 5 },
-    { key: 'settings', text: 'Settings', value: 6 },
-    { key: 'sign-out', text: 'Sign Out', value: 7},
+    { key: 'stars', text: 'Your Events', value: 2 },
+    { key: 'businesses', text: 'Your Business', value: 3 },
+    { key: 'help', text: 'Help & Support', value: 4 },
+    { key: 'settings', text: 'Settings & Privacy', value: 5},
+    { key: 'sign-out', text: 'Sign Out', value: 6},
     ]
 
 
