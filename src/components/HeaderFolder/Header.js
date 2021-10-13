@@ -1,5 +1,5 @@
 import React, { useState,  }  from 'react'
-import { Grid, Button, GridRow, GridColumn, Dropdown } from 'semantic-ui-react'
+import { Grid, Button, GridRow, GridColumn, Dropdown, Icon } from 'semantic-ui-react'
 import logo from '../../images/logo.png'
 import notificationicon from '../../images/notificationicon.png'
 import chaticon from '../../images/chaticon.png'
@@ -144,7 +144,12 @@ export default function Header() {
                             <GridRow columns={4} verticalAlign="middle">
 
                                 <GridColumn  computer={6} widescreen={6} largeScreen={8}>
-                                    <Button style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'40px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}}>+ Post</Button>
+                                    <Button animated style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'40px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}}>
+                                        <Button.Content visible>+ Post</Button.Content>
+                                        <Button.Content hidden>
+                                            <Icon name='arrow right' />
+                                        </Button.Content>
+                                    </Button>
 
 
                                 </GridColumn>
@@ -238,7 +243,7 @@ export default function Header() {
                             <GridRow columns={4} verticalAlign="middle">
 
                                 <GridColumn tablet={4} >
-                                    <Button style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'30px', width:'80px',color:'#FFFFFF', borderRadius:'20px'}}>Post</Button>
+                                    <Button size='small' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', width:'80px',color:'#FFFFFF', borderRadius:'20px'}}>Post</Button>
 
 
                                 </GridColumn>
@@ -332,8 +337,8 @@ export default function Header() {
 
                             <GridRow columns={4} verticalAlign="middle">
 
-                                <GridColumn mobile={4} >
-                                    <Button style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'30px', width:'50px',color:'#FFFFFF', borderRadius:'20px'}}>+</Button>
+                                <GridColumn mobile={4} textAlign="center">
+                                    <Button size='mini' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa',  width:'50px',color:'#FFFFFF', borderRadius:'20px', textAlign: "center"}}>+</Button>
 
 
                                 </GridColumn>
