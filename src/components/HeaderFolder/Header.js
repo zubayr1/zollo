@@ -56,6 +56,7 @@ export default function Header() {
         }
     }
 
+    
     const trigger = (
         <span>
           <img src={usericon} style={{height:'35px', borderRadius:'50%'}} alt="usericon" />
@@ -157,7 +158,9 @@ export default function Header() {
 
 
                                 <GridColumn computer={2} widescreen={2} largeScreen={3} floated='right'>
-                                    <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    <Link to="/notifications">
+                                        <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    </Link>
 
                                 </GridColumn>
 
@@ -251,7 +254,9 @@ export default function Header() {
 
 
                                 <GridColumn tablet={3}  floated='right'>
-                                    <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    <Link to="/notifications">
+                                        <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    </Link>
 
                                 </GridColumn>
 
@@ -346,7 +351,9 @@ export default function Header() {
 
 
                                 <GridColumn mobile={3}  floated='right'>
-                                    <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    <Link to="/notifications">
+                                        <img src={notificationicon} style={{height:'25px'}} alt="notification"/>
+                                    </Link>
 
                                 </GridColumn>
 
