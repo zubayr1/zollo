@@ -8,6 +8,7 @@ import ForgotPassword from './components/ForgotPassword_Folder/ForgotPassword';
 
 import PrivateRoute from './components/PrivateRouteFolder/PrivateRoute';
 import Profile from './components/Profile/Profile';
+import Notification from './components/Notification_Folder/Notification';
 
 function App() {
   return (
@@ -31,9 +32,11 @@ function App() {
 
                 <Route path="/forgot-password" component={ForgotPassword} />
 
+                <Route path="/notifications" component={Notification} />
+
                 <Route path="/:profile" component={Profile} />
 
-
+                
               </Switch>
 
             </AuthProvider>
