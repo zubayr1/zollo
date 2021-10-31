@@ -24,3 +24,8 @@ date:
 24.09.21: Edit Login Page
 
 26.09.21: branching, edit signup, fgps
+
+
+Added features:
+AI Assitant
+Network
