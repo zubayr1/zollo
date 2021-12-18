@@ -10,8 +10,11 @@ import PrivateRoute from './components/PrivateRouteFolder/PrivateRoute';
 import Profile from './components/Profile/Profile';
 import Notification from './components/Notification_Folder/Notification';
 
+<<<<<<< HEAD
 import Post from './components/Post_Folder/Post'
 
+=======
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
 function App() {
   return (
 
@@ -36,12 +39,18 @@ function App() {
 
                 <Route path="/notifications" component={Notification} />
 
+<<<<<<< HEAD
                 <Route path="/post" component={Post} />
 
                 <Route path="/:profile" component={Profile} />
 
                 
                 
+=======
+                <Route path="/:profile" component={Profile} />
+
+                
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
               </Switch>
 
             </AuthProvider>
