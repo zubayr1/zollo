@@ -55,6 +55,10 @@ export default function Header() {
             handlelogout()
         }
     }
+<<<<<<< HEAD
+    
+=======
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
 
     
     const trigger = (
@@ -145,13 +149,25 @@ export default function Header() {
                             <GridRow columns={4} verticalAlign="middle">
 
                                 <GridColumn  computer={6} widescreen={6} largeScreen={8}>
+<<<<<<< HEAD
+
+                                    <Link to='/post'>
+                                    <Button animated style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'40px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}} 
+                                    
+                                    >
+=======
                                     <Button animated style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', height:'40px', width:'120px',color:'#FFFFFF', borderRadius:'20px'}}>
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
                                         <Button.Content visible>+ Post</Button.Content>
                                         <Button.Content hidden>
                                             <Icon name='arrow right' />
                                         </Button.Content>
                                     </Button>
+<<<<<<< HEAD
+                                    </Link>
+=======
 
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
 
                                 </GridColumn>
 
@@ -246,7 +262,15 @@ export default function Header() {
                             <GridRow columns={4} verticalAlign="middle">
 
                                 <GridColumn tablet={4} >
+<<<<<<< HEAD
+                                <Link to='/post'>
+                                    <Button size='small' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', width:'80px',color:'#FFFFFF', borderRadius:'20px'}}
+                                    
+                                    >Post</Button>
+                                </Link>
+=======
                                     <Button size='small' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa', width:'80px',color:'#FFFFFF', borderRadius:'20px'}}>Post</Button>
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
 
 
                                 </GridColumn>
@@ -343,7 +367,15 @@ export default function Header() {
                             <GridRow columns={4} verticalAlign="middle">
 
                                 <GridColumn mobile={4} textAlign="center">
+<<<<<<< HEAD
+                                <Link to='/post'>
+                                    <Button size='mini' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa',  width:'50px',color:'#FFFFFF', borderRadius:'20px', textAlign: "center"}}
+                                    
+                                    >+</Button>
+                                    </Link>
+=======
                                     <Button size='mini' style={{backgroundColor:'#B429F9', boxShadow:'0 8px 16px 0 #f1defa, 0 6px 20px 0 #e5bbfa',  width:'50px',color:'#FFFFFF', borderRadius:'20px', textAlign: "center"}}>+</Button>
+>>>>>>> f31165dd175da110724d7b29b93d7f6fda9fba8d
 
 
                                 </GridColumn>
