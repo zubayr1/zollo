@@ -29,3 +29,7 @@ date:
 Added features:
 AI Assitant
 Network
+
+
+
+some updates in design
