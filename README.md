@@ -31,5 +31,3 @@ AI Assitant
 Network
 
 
-
-some updates in design.
