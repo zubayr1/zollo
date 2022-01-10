@@ -31,9 +31,3 @@ AI Assitant
 Network
 
 
-
-Rest API in posts
-=======
-
-some updates in design
-
